@@ -2,9 +2,22 @@ import gimnasia.*
 
 describe "rutinas" {
 
-//Punto 1: rutinas
-//	const correrEnLaPlaya = // Una actividad de running con intensisdad 1.2
-//	const remarEnElDelta = // Una actividad de remo
+test "correr en la playa por 5 minutos "{ 
+const correrEnLaPlaya = new Running(tiempo= 5,intensidadRunning= 1.2)
+correrEnLaPlaya.descansar()
+assert.equals(2,correrEnLaPlaya.descanso())
+correrEnLaPlaya.caloriasQuemadas()
+assert.equals(360, correrEnLaPlaya.caloriasQuemadas())
+}
+test "correr en la playa por 90 minutos "{ 
+const correrEnLaPlaya = new Running(tiempo= 90,intensidadRunning= 1.2)
+correrEnLaPlaya.descansar()
+assert.equals(5,correrEnLaPlaya.descanso())
+correrEnLaPlaya.caloriasQuemadas()
+assert.equals(10200, correrEnLaPlaya.caloriasQuemadas())
+}
+
+//const remarEnElDelta = // Una actividad de remo
 //	const remarEnCaminoRemeros = // Una actividad de remo comptetitivo
 //	const maratonBA = //Una maraton con intensidad 1.5
 
